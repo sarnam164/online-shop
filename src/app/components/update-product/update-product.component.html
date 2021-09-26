@@ -1,0 +1,40 @@
+<h1 class="text-center" style="margin-top: 20px;">Update Product</h1>
+<div class="bootstrap-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <mat-card>
+            <form (ngSubmit)="onSubmit()">
+
+              <mat-form-field  class="full-width" appearance="standard">
+                <mat-label>Product Category</mat-label>
+                <input [(ngModel)] = "product.productCategory" matInput name="productCategory" type="text">
+              </mat-form-field>
+
+              <mat-form-field  class="full-width" appearance="standard">
+                <mat-label>Product Name</mat-label>
+                <input [(ngModel)] = "product.productName" matInput name="productName" type="text">
+              </mat-form-field>
+
+              <mat-form-field  class="full-width" appearance="standard">
+                <mat-label>Product Description</mat-label>
+                <input [(ngModel)] = "product.productDescription" matInput name="productDescription" type="text">
+              </mat-form-field>
+
+              <mat-form-field  class="full-width" appearance="standard">
+                <mat-label>Units</mat-label>
+                <input [(ngModel)] = "product.units" matInput name="units" type="number">
+              </mat-form-field>
+
+              <div class="container text-center">
+                <button type="submit" mat-raised-button color="primary">Update</button>
+                <button type="reset" mat-raised-button style="margin-left: 20px;">Clear</button>
+              </div>
+
+          </form>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+
