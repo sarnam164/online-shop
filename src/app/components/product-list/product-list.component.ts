@@ -35,6 +35,10 @@ export class ProductListComponent implements OnInit {
         if(data.length==0){
           let snackBarRef = this.snackbar.open('No Records present in table', 'Close');
         }
+      },
+      error=>{
+        console.log(error);
+        let snackBarRef = this.snackbar.open('Unable to Fetch Records from Server', 'Close');
       });
   }
 
@@ -52,6 +56,7 @@ export class ProductListComponent implements OnInit {
       },
       error=>{
         console.log(error);
+        let snackBarRef = this.snackbar.open('Failed to Delete Product', 'Close');
       }
     )
   }

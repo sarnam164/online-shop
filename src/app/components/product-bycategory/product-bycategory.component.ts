@@ -36,6 +36,10 @@ export class ProductBycategoryComponent implements OnInit {
         if(data.length==0){
           let snackBarRef = this.snackBar.open('No Records Found', 'Close');
         }
+      },
+      error=>{
+        console.log(error);
+        let snackBarRef = this.snackBar.open('Unable to Fetch Records from Server', 'Close');
       });
   }
 
@@ -57,6 +61,7 @@ export class ProductBycategoryComponent implements OnInit {
       },
       error=>{
         console.log(error);
+        let snackBarRef = this.snackBar.open('Failed to Delete Product', 'Close');
       }
     )
   }

@@ -1,3 +1,4 @@
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { LoginService } from './../../services/login.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -14,7 +15,7 @@ export class LoginComponent implements OnInit {
   }
   hide = true;
 
-  constructor(private loginservice:LoginService) { }
+  constructor(private loginservice:LoginService, private snackbar:MatSnackBar) { }
 
   ngOnInit(): void {
   }
@@ -31,6 +32,7 @@ export class LoginComponent implements OnInit {
         (error:any)=>{
           //error
           console.log(error);
+          let snackBarRef = this.snackbar.open("Incorrect Credentials","Close");
         }
       );
     }else{

@@ -1,3 +1,4 @@
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { ProductService } from './../../services/product.service';
 import { Product } from './../../product';
@@ -12,7 +13,7 @@ export class AddProductComponent implements OnInit {
 
   product: Product = new Product();
 
-  constructor(private productService:ProductService, private router:Router) { }
+  constructor(private productService:ProductService, private router:Router, private snackbar:MatSnackBar) { }
 
   ngOnInit(): void {
   }
@@ -25,6 +26,7 @@ export class AddProductComponent implements OnInit {
       },
       error=>{
         console.log(error);
+        let snackBarRef = this.snackbar.open("Failed to Add Product", "Close");
       }
     )
   }
