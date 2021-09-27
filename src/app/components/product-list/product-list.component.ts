@@ -38,7 +38,7 @@ export class ProductListComponent implements OnInit {
       },
       error=>{
         console.log(error);
-        let snackBarRef = this.snackbar.open('Unable to Fetch Records from Server', 'Close');
+        let snackBarRef = this.snackbar.open('Unable to Fetch Records from the Server', 'Close');
       });
   }
 
