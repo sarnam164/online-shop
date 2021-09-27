@@ -6,12 +6,14 @@ import { Injectable } from '@angular/core';
 })
 export class LoginService {
 
-  url="https://online-shop-164.herokuapp.com";
+  private url="https://online-shop-164.herokuapp.com";
+
+  //For Local Testing
+  //private url = "http://localhost:8080"
 
   constructor(private http:HttpClient) { }
 
   //Calling server to generate token
-
   generateToken(credentials:any){
     return this.http.post(`${this.url}/token`, credentials);
   }

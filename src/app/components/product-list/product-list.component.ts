@@ -1,3 +1,4 @@
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { ProductService } from './../../services/product.service';
 import { Product } from './../../product';
@@ -18,7 +19,7 @@ export class ProductListComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor(private productService:ProductService, private router:Router) { }
+  constructor(private productService:ProductService, private router:Router, private snackbar:MatSnackBar) { }
 
   ngOnInit(): void {
     this.getProducts();
@@ -31,15 +32,18 @@ export class ProductListComponent implements OnInit {
         console.log(data);
         this.dataSource = new MatTableDataSource<Product>(this.products);
         this.dataSource.paginator = this.paginator;
+        if(data.length==0){
+          let snackBarRef = this.snackbar.open('No Records present in table', 'Close');
+        }
       });
   }
 
-  private updateProduct(productId:number){
+  private updateProduct(productId:string){
     console.log(productId);
     this.router.navigate(['/updateProduct', productId]);
   }
 
-  private deleteProduct(productId:number){
+  private deleteProduct(productId:string){
     console.log(productId);
     this.productService.deleteProduct(productId).subscribe(
       data=>{

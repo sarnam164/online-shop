@@ -43,12 +43,12 @@ export class ProductBycategoryComponent implements OnInit {
     this.getProducts();
   }
 
-  private updateProduct(productId:number){
+  private updateProduct(productId:string){
     console.log(productId);
     this.router.navigate(['/updateProduct', productId]);
   }
 
-  private deleteProduct(productId:number){
+  private deleteProduct(productId:string){
     console.log(productId);
     this.productService.deleteProduct(productId).subscribe(
       data=>{

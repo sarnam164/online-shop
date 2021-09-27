@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdateProductComponent implements OnInit {
 
-  productId:number;
+  productId:string;
   product:Product={productID:null,productCategory:null,productName:null,productDescription:null,units:null};
 
   constructor(private productService:ProductService, private router:Router, private route:ActivatedRoute) { }

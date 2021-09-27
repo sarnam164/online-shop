@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductByidComponent implements OnInit {
 
-  productId:number;
+  productId:string;
   product:Product={productID:null,productCategory:null,productName:null,productDescription:null,units:null};
 
   constructor(private productService:ProductService, private snackbar:MatSnackBar) { }
@@ -19,6 +19,7 @@ export class ProductByidComponent implements OnInit {
   }
 
   onSubmit(){
+    this.product = {productID:null,productCategory:null,productName:null,productDescription:null,units:null};
     this.productService.getProductById(this.productId).subscribe(
       data=>{
         this.product=data;
