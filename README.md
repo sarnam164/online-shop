@@ -1,5 +1,9 @@
 # OnlineShop
 
+This project is currently hosted on https://product-shop-demo.herokuapp.com/
+
+Use "test" and "test" for the login credentials.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
 
 ## Development server
