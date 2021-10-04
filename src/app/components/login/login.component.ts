@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
         }
       );
     }else{
-      console.log('Please enter username and password');
+      let snackBarRef = this.snackbar.open("Enter Username and Password","Close");
     }
   }
 

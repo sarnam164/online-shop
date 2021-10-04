@@ -1,3 +1,4 @@
+import { RegisterComponent } from './components/register/register.component';
 import { UpdateProductComponent } from './components/update-product/update-product.component';
 import { ProductByidComponent } from './components/product-byid/product-byid.component';
 import { ProductBycategoryComponent } from './components/product-bycategory/product-bycategory.component';
@@ -13,6 +14,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {path:'', component:HomeComponent, pathMatch:'full'},
   {path:'login', component:LoginComponent, pathMatch:'full'},
+  {path:'register', component:RegisterComponent,pathMatch:'full'},
   {path:'dashboard', component:DashboardComponent, pathMatch:'full', canActivate:[AuthGuard]},
   {path:'productlist', component:ProductListComponent, pathMatch:'full', canActivate:[AuthGuard]},
   {path:'addProduct', component:AddProductComponent, pathMatch:'full', canActivate:[AuthGuard]},

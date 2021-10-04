@@ -1,3 +1,6 @@
 .example-spacer{
   flex: 1 1 auto;
 }
+.mr-30{
+  margin-right: 30px;
+}

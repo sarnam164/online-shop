@@ -2,7 +2,8 @@
   <span *ngIf="!loggedIn"><a style="font-size: larger;" mat-icon-button routerLink="/">OnlineShop</a></span>
   <span *ngIf="loggedIn"><a style="font-size: larger;" mat-icon-button routerLink="/dashboard">OnlineShop</a></span>
   <span class="example-spacer"></span>
+  <a *ngIf="!loggedIn" mat-icon-button routerLink="/register" class="mr-30">Register</a>
   <a *ngIf="!loggedIn" mat-icon-button routerLink="/login">Login</a>
-  <a id="username" *ngIf="loggedIn" mat-icon-button></a>
+  <!--<a id="username" *ngIf="loggedIn" mat-icon-button></a>-->
   <a *ngIf="loggedIn" mat-icon-button (click)="logoutUser()">Logout</a>
 </mat-toolbar>

@@ -28,6 +28,7 @@ import { AddProductComponent } from './components/add-product/add-product.compon
 import { ProductBycategoryComponent } from './components/product-bycategory/product-bycategory.component';
 import { ProductByidComponent } from './components/product-byid/product-byid.component';
 import { UpdateProductComponent } from './components/update-product/update-product.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { UpdateProductComponent } from './components/update-product/update-produ
     ProductBycategoryComponent,
     ProductByidComponent,
     UpdateProductComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
