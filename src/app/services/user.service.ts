@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 })
 export class UserService {
 
-  private url="https://online-shop-164.herokuapp.com";
+  private url="https://online-shop-164.herokuapp.com/user";
 
   //For Local Testing
   //private url = "http://localhost:8080/user"
