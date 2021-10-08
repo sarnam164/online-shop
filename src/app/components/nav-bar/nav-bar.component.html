@@ -1,6 +1,15 @@
 <mat-toolbar color="primary">
-  <span *ngIf="!loggedIn"><a style="font-size: larger;" mat-icon-button routerLink="/">OnlineShop</a></span>
-  <span *ngIf="loggedIn"><a style="font-size: larger;" mat-icon-button routerLink="/dashboard">OnlineShop</a></span>
+  <span *ngIf="!loggedIn">
+      <a style="font-size: larger;" mat-icon-button routerLink="/">
+        <img class="img-fluid" style="width: 70px;margin-top: -12px;" src="/assets/logo.png" alt="Logo">
+      </a>
+  </span>
+  <span *ngIf="loggedIn">
+    <a style="font-size: larger;" mat-icon-button routerLink="/dashboard">
+      <img class="img-fluid" style="width: 70px;margin-top: -12px;" src="/assets/logo.png" alt="Logo">
+    </a>
+  </span>
+  <a *ngIf="loggedIn" mat-icon-button routerLink="/dashboard" style="margin-left: 5%;">Dashboard</a>
   <span class="example-spacer"></span>
   <a *ngIf="!loggedIn" mat-icon-button routerLink="/register" class="mr-30">Register</a>
   <a *ngIf="!loggedIn" mat-icon-button routerLink="/login">Login</a>
