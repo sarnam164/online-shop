@@ -12,6 +12,7 @@ import { Component, OnInit } from '@angular/core';
 export class RegisterComponent implements OnInit {
 
   user:User = new User();
+  loading = false;
 
   constructor(private userService:UserService, private router:Router, private snackbar:MatSnackBar) {
     this.user.enabled = true;
@@ -27,14 +28,17 @@ export class RegisterComponent implements OnInit {
   }
 
   saveUser(){
+    this.loading = true;
     this.userService.addUser(this.user).subscribe(
       data=>{
         console.log(data);
+        this.loading = false;
         let snackBarRef = this.snackbar.open("Successfull added User", "Close");
         this.goToLoginPage();
       },
       error=>{
         console.log(error);
+        this.loading = false;
         let snackBarRef = this.snackbar.open("Failed to register User", "Close");
       }
     )

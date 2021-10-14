@@ -8,3 +8,10 @@
   font-weight: bold;
   color: #3289C8;
 }
+.loading-image{
+  width: 5%;
+  margin-top: 12px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
